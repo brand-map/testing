@@ -1,0 +1,23 @@
+{
+  "name": "@brand-map/{{ name }}",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@brand-map/eslint-config": "workspace:*",
+    "@brand-map/prettier-config": "workspace:*",
+    "@brand-map/tsconfig": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

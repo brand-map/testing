@@ -1,0 +1,73 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+  "vcs": {
+    "enabled": false,
+    "clientKind": "git",
+    "useIgnoreFile": false
+  },
+  "files": {
+    "ignoreUnknown": false,
+    "maxSize": 1001048576
+  },
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "lineWidth": 160,
+    "includes": ["**", "!**/*/routeTree.gen.ts", "!**/__generated__/*", "!**/dist/*", "!**/.output/*"],
+    "formatWithErrors": true
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "complexity": {
+        "noVoid": "off",
+        "noArguments": "error",
+        "noBannedTypes": "error",
+        "noCommaOperator": "error",
+        "noEmptyTypeParameters": "error",
+        "noExtraBooleanCast": "off",
+        "noFlatMapIdentity": "error",
+        "noForEach": "error",
+        "noImplicitCoercions": "error",
+        "noStaticOnlyClass": "error",
+        "noUselessCatch": "error",
+        "noUselessConstructor": "error",
+        "noUselessContinue": "error",
+        "noUselessFragments": "error",
+        "noUselessLabel": "error",
+        "useArrowFunction": "off",
+        "useOptionalChain": "error",
+        "useSimpleNumberKeys": "error",
+        "useWhile": "error"
+      },
+      "suspicious": {
+        "noVar": "error",
+        "useAwait": "error",
+        "useDefaultSwitchClauseLast": "error"
+      },
+      "correctness": {
+        "noUnusedVariables": "off",
+        "noVoidTypeReturn": "off"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "double"
+    }
+  },
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  }
+}

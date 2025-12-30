@@ -1,0 +1,39 @@
+{
+  "name": "client",
+  "private": true,
+  "scripts": {
+    "android": "expo run:android",
+    "auth:generate": "pnpm -F @brand-map/auth generate",
+    "build": "turbo run build",
+    "clean": "git clean -xdf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "cmd": "bun run ./scripts/src/_main.ts",
+    "db:push": "turbo -F @brand-map/db push",
+    "db:studio": "turbo -F @brand-map/db studio",
+    "dev": "turbo dev --continue",
+    "dev:next": "turbo watch dev -F @brand-map/nextjs...",
+    "format": "turbo run format --continue -- --cache --cache-location .cache/.prettiercache",
+    "format:fix": "turbo run format --continue -- --write --cache --cache-location .cache/.prettiercache",
+    "postinstall": "echo pnpm lint:ws",
+    "ios": "expo run:ios",
+    "lint": "turbo run lint --continue -- --cache --cache-location .cache/.eslintcache",
+    "lint:all": " pnpm lint && pnpm lint:ws && pnpm format && pnpm typecheck",
+    "lint:fix": "turbo run lint --continue -- --fix --cache --cache-location .cache/.eslintcache",
+    "lint:ws": "pnpm dlx sherif@latest",
+    "typecheck": "turbo run typecheck",
+    "ui-add": "turbo run ui-add"
+  },
+  "devDependencies": {
+    "@brand-map/types": "workspace:*",
+    "@turbo/gen": "2.7.1",
+    "@types/luxon": "catalog:",
+    "@types/node": "catalog:",
+    "turbo": "2.7.1",
+    "typescript": "catalog:"
+  },
+  "packageManager": "pnpm@10.19.0",
+  "engines": {
+    "node": "22.21.0",
+    "pnpm": "10.19.0"
+  }
+}

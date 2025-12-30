@@ -1,0 +1,53 @@
+{
+  "name": "@brand-map/web",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "pnpm with-env vite dev",
+    "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path .prettierignore",
+    "lint": "eslint --flag unstable_native_nodejs_ts_config",
+    "start": "vite start",
+    "typecheck": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "dependencies": {
+    "@brand-map/atlas": "workspace:*",
+    "@brand-map/ui": "workspace:*",
+    "@codeandmoney/agvan": "catalog:",
+    "@fontsource-variable/geist": "5.2.8",
+    "@fontsource-variable/geist-mono": "5.2.7",
+    "@stylexjs/stylex": "catalog:",
+    "@tanstack/react-form": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "@tanstack/react-router": "catalog:",
+    "@tanstack/react-router-devtools": "catalog:",
+    "@tanstack/react-router-ssr-query": "catalog:",
+    "@tanstack/react-start": "catalog:",
+    "better-auth": "catalog:",
+    "dotenv": "^17.2.3",
+    "dotenv-cli": "^11.0.0",
+    "nitro": "3.0.1-alpha.1",
+    "react": "catalog:react-19",
+    "react-dom": "catalog:react-19",
+    "storybook": "catalog:",
+    "superjson": "2.2.6"
+  },
+  "devDependencies": {
+    "@brand-map/eslint-config": "workspace:*",
+    "@brand-map/prettier-config": "workspace:*",
+    "@brand-map/tsconfig": "workspace:*",
+    "@stylexjs/babel-plugin": "catalog:",
+    "@stylexjs/eslint-plugin": "catalog:",
+    "@stylexjs/postcss-plugin": "catalog:",
+    "@stylexjs/unplugin": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react-19",
+    "@types/react-dom": "catalog:react-19",
+    "@vitejs/plugin-react": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:"
+  }
+}

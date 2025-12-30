@@ -1,0 +1,14 @@
+{
+  "extends": "@brand-map/tsconfig/base.json",
+  "compilerOptions": {
+    "lib": ["ES2024", "dom", "dom.iterable"],
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

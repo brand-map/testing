@@ -1,0 +1,7 @@
+{
+  "name": "@brand-map/tsconfig",
+  "private": true,
+  "files": [
+    "*.json"
+  ]
+}

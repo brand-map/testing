@@ -1,0 +1,41 @@
+{
+  "name": "@brand-map/atlas",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.tsx",
+    "./atlas-providers": "./src/providers/atlas-providers.tsx",
+    "./views/main": "./src/views/main.tsx",
+    "./views/store": "./src/views/store.tsx"
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "tsc",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "dependencies": {
+    "@brand-map/mithra": "workspace:*",
+    "@brand-map/ui": "workspace:*",
+    "@brand-map/utils": "workspace:*",
+    "@codeandmoney/agvan": "catalog:",
+    "awilix": "^12.0.5",
+    "neverthrow": "catalog:",
+    "react": "catalog:react-19",
+    "react-native": "catalog:react-native",
+    "react-native-mmkv-storage": "catalog:react-native",
+    "valibot": "catalog:"
+  },
+  "devDependencies": {
+    "@brand-map/eslint-config": "workspace:*",
+    "@brand-map/prettier-config": "workspace:*",
+    "@brand-map/tsconfig": "workspace:*",
+    "@brand-map/types": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react-19",
+    "typescript": "catalog:"
+  }
+}

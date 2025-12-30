@@ -1,0 +1,28 @@
+{
+  "name": "@brand-map/types",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./local-store": "./src/local-store/exports.ts"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "format": "prettier --check . --ignore-path ../../.gitignore",
+    "lint": "eslint --flag unstable_native_nodejs_ts_config",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "devDependencies": {
+    "@brand-map/eslint-config": "workspace:*",
+    "@brand-map/prettier-config": "workspace:*",
+    "@brand-map/tsconfig": "workspace:*",
+    "@types/react": "catalog:react-19",
+    "react": "catalog:react-19",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "@brand-map/types": "catalog:",
+    "@codeandmoney/agvan": "catalog:",
+    "neverthrow": "catalog:",
+    "react": "catalog:react-19"
+  }
+}

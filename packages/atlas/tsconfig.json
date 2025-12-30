@@ -1,0 +1,8 @@
+{
+  "extends": ["@brand-map/tsconfig/base.json"],
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "include": ["src", "agvan.d.ts"],
+  "exclude": ["node_modules"]
+}

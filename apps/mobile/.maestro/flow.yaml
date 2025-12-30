@@ -1,0 +1,4 @@
+appId: app.brandmap.shop
+---
+- launchApp
+- tapOn: "test stylex"
