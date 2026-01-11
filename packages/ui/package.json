@@ -25,7 +25,7 @@
     "ui-add": "pnpm dlx shadcn@latest add && prettier src --write --list-different"
   },
   "dependencies": {
-    "@codeandmoney/soelma": "catalog:",
+    "@codeandmoney/react-native-stylex": "catalog:",
     "@stylexjs/stylex": "catalog:",
     "react": "catalog:react-19",
     "react-native": "catalog:react-native"

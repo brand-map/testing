@@ -1,19 +1,12 @@
 import * as stylex from "@stylexjs/stylex";
 
-import type { Props } from "./types";
+import { styles } from "./styles/web";
+import type { Button as ButtonComponent } from "./types";
 
-const styles = stylex.create({
-  button: {
-    backgroundColor: "green",
-    height: 300,
-    width: 300,
-  },
-});
-
-export function Button({ title, onPress }: Props) {
+export const Button: typeof ButtonComponent = ({ title, onPress }) => {
   return (
     <button {...stylex.props(styles.button)} onClick={onPress}>
       {title}
     </button>
   );
-}
+};

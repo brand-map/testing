@@ -9,9 +9,9 @@ catalogs:
     '@codeandmoney/agvan':
       specifier: 0.0.0-dev.3
       version: 0.0.0-dev.3
-    '@codeandmoney/soelma':
-      specifier: 0.0.0-dev.2
-      version: 0.0.0-dev.2
+    '@codeandmoney/react-native-stylex':
+      specifier: 0.0.0-dev.12
+      version: 0.0.0-dev.12
     '@eslint/js':
       specifier: 9.39.2
       version: 9.39.2
@@ -532,9 +532,9 @@ importers:
 
   packages/ui:
     dependencies:
-      '@codeandmoney/soelma':
+      '@codeandmoney/react-native-stylex':
         specifier: 'catalog:'
-        version: 0.0.0-dev.2(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.0)(bufferutil@4.0.8)(react@19.1.0))(react@19.1.0)
+        version: 0.0.0-dev.12(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.0)(bufferutil@4.0.8)(react@19.1.0))(react@19.1.0)
       '@stylexjs/stylex':
         specifier: 'catalog:'
         version: 0.17.4
@@ -1243,8 +1243,8 @@ packages:
       awilix: ^12
       react: ^19
 
-  '@codeandmoney/soelma@0.0.0-dev.2':
-    resolution: {integrity: sha512-FpPkHh5DP003lgDTgN7nRXcjuJVv/W/U/ifKJ9RIa9XmAKoadgyWLCFJyeXNDvjmpgnzeah3g0NvMM9qmKEVAg==}
+  '@codeandmoney/react-native-stylex@0.0.0-dev.12':
+    resolution: {integrity: sha512-MD0gVSP88xKEJI4z98qXI2vBr09pBdyQZHiOe/zkYd1VRt1XDYosxfwVWrJ2wWhLDHUOO4lUUvtHFioTT/BoaQ==}
     peerDependencies:
       react: '>=16.4.0'
       react-native: '>=0.59.0'
@@ -8275,7 +8275,7 @@ snapshots:
       awilix: 12.0.5
       react: 19.1.0
 
-  '@codeandmoney/soelma@0.0.0-dev.2(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.0)(bufferutil@4.0.8)(react@19.1.0))(react@19.1.0)':
+  '@codeandmoney/react-native-stylex@0.0.0-dev.12(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.1.0)(bufferutil@4.0.8)(react@19.1.0))(react@19.1.0)':
     optionalDependencies:
       react: 19.1.0
       react-native: 0.81.5(@babel/core@7.28.5)(@types/react@19.1.0)(bufferutil@4.0.8)(react@19.1.0)

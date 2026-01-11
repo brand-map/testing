@@ -28,7 +28,6 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <AtlasProviders config={{ platform: "web", userRole: "curator" }}>{children}</AtlasProviders>
         <TanStackRouterDevtools position="bottom-right" />
-        {/* FIX: <Scripts /> produces hydration error */}
         <Scripts />
       </body>
     </html>

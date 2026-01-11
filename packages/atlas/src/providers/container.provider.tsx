@@ -1,4 +1,3 @@
-
 import { useMemo } from "react";
 import { ContainerProvider as AgvanProvider } from "@codeandmoney/agvan";
 import { asClass, asValue, createContainer } from "awilix";
@@ -6,7 +5,7 @@ import * as v from "valibot";
 
 import { LocalStore } from "@brand-map/platform/store";
 
-import { Cradle } from "@brand-map/types/container"
+import { Cradle } from "@brand-map/types/container";
 
 import { PropsSchema } from "./container.validation";
 
@@ -19,7 +18,7 @@ export function ContainerProvider({ children, ...providedProps }: React.PropsWit
 
   container.register("userRole", asValue(props.userRole));
 
-  // container.register("localStore", asClass(LocalStore));
+  container.register("localStore", asClass(LocalStore));
 
   return <AgvanProvider container={container}>{children}</AgvanProvider>;
 }
