@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./local-store": "./src/local-store/exports.ts"
+    "./local-store": "./src/local-store/exports.ts",
+    "./container": "./src/container.ts"
   },
   "scripts": {
     "clean": "git clean -xdf .cache .turbo dist node_modules",
@@ -20,7 +21,7 @@
     "typescript": "catalog:"
   },
   "peerDependencies": {
-    "@brand-map/types": "catalog:",
+    "@brand-map/types": "workspace:*",
     "@codeandmoney/agvan": "catalog:",
     "neverthrow": "catalog:",
     "react": "catalog:react-19"
