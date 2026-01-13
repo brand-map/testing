@@ -1,24 +1,25 @@
-import { useMemo } from "react";
-import { ContainerProvider as AgvanProvider } from "@codeandmoney/agvan";
-import { asClass, asValue, createContainer } from "awilix";
-import * as v from "valibot";
+// import { createContext, useContext, useMemo } from "react";
+// import { ContainerProvider as AgvanProvider } from "@codeandmoney/agvan";
+// import { asClass, asValue, createContainer } from "awilix";
+// import * as v from "valibot";
 
-import { LocalStore } from "@brand-map/platform/store";
+// // import { LocalStore } from "@brand-map/platform/store";
 
-import { Cradle } from "@brand-map/types/container";
+// import { Cradle } from "@brand-map/types/container";
 
-import { PropsSchema } from "./container.validation";
+// import { PropsSchema } from "./container.validation";
 
-export function ContainerProvider({ children, ...providedProps }: React.PropsWithChildren & PropsSchema) {
-  const props = v.parse(PropsSchema, providedProps);
+// const ContainerContext = createContext<Cradle | null>(null);
 
-  const container = useMemo(() => createContainer<Cradle>({ injectionMode: "PROXY" }), Object.values(props));
+// export function useContainer() {
+//   const context = useContext(ContainerContext);
+//   if (!context) {
+//     throw new Error("`useContainer` must be used within `ContainerProvider`");
+//   }
+// }
 
-  container.register("example", asValue("example"));
+// export function ContainerProvider({ children, ...providedProps }: React.PropsWithChildren & PropsSchema) {
+//   const props = v.parse(PropsSchema, providedProps);
 
-  container.register("userRole", asValue(props.userRole));
-
-  container.register("localStore", asClass(LocalStore));
-
-  return <AgvanProvider container={container}>{children}</AgvanProvider>;
-}
+//   return <AgvanProvider container={container}>{children}</AgvanProvider>;
+// }

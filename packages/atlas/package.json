@@ -6,6 +6,7 @@
   "exports": {
     ".": "./src/index.tsx",
     "./atlas-providers": "./src/providers/atlas-providers.tsx",
+    "./store-provider": "./src/providers/store-provider.tsx",
     "./views/main": "./src/views/main.tsx",
     "./views/store": "./src/views/store.tsx"
   },

@@ -1,14 +1,13 @@
 import { useCallback, useState } from "react";
-import { useCradle } from "@codeandmoney/agvan";
-import { Cradle } from "@brand-map/types/container";
 
 import { Button } from "@brand-map/ui/button";
 import { Typo } from "@brand-map/ui/typo";
 import { View } from "@brand-map/ui/view";
+import { useStore } from "../providers/store-provider";
 
 export function LocalStore() {
   const [state, setState] = useState("Default Value");
-  const { localStore } = useCradle() as Cradle;
+  const { localStore } = useStore();
 
   const saveToStorage = useCallback(async () => {
     await localStore.set("key", `value: ${Math.random()}`);
@@ -28,7 +27,7 @@ export function LocalStore() {
 
   return (
     <View>
-      <Button title={"Save Rendom"} onPress={saveToStorage} />
+      <Button title={"Save Random Number"} onPress={saveToStorage} />
       <Button title={"Get"} onPress={getFromStorage} />
       <Button title={"Remove "} onPress={removeFormStorage} />
 

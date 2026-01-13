@@ -4,7 +4,7 @@ import type { QueryClient } from "@tanstack/react-query";
 import { createRootRouteWithContext, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 
-import { AtlasProviders } from "@brand-map/atlas/atlas-providers";
+import { StoreProvider } from "@brand-map/atlas/store-provider";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({ component: RootComponent });
 
@@ -26,7 +26,9 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <AtlasProviders config={{ platform: "web", userRole: "curator" }}>{children}</AtlasProviders>
+        <StoreProvider platform="web" userRole="shopper">
+          {children}
+        </StoreProvider>
         <TanStackRouterDevtools position="bottom-right" />
         <Scripts />
       </body>
